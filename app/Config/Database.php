@@ -21,11 +21,11 @@ class Database extends Config
      */
     public string $defaultGroup = 'default';
 
-    /**
+    /*
      * The default database connection.
      */
     public array $default = [
-        'DSN'      => 'pgsql:host=192.168.2.95;port=5432;dbname=db_sga;user=postgres;password=Desarrollo8ty7.',
+        'DSN'      => 'pgsql:host=localhost;port=5432;dbname=noticias_ultima_hora;user=postgres;password= Barce23',
         'hostname' => 'localhost',
         'username' => '',
         'password' => '',

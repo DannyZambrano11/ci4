@@ -33,8 +33,14 @@ $routes->get('/', 'Home::index');
 $routes->get('/prueba', 'Home::prueba');
 $routes->get('/api', 'Home::api');
 $routes->get('/login', 'Home::login');
-$routes->get('/testbd/(:any)', 'Home::testbd/$1');
+$routes->get('/testbd','Home::testbd');
 
+$routes->delete('testbd/(:num)', 'Home::borrarinfromacion/$1');
+$routes->post('testbd/agregarInformacion', 'Home::agregarInformacion');
+$routes->put('informacion/actualizar/(:num)', 'Home::actualizarInformacion/$1');
+
+
+$routes->match(['get', 'post'], '/testbd', 'Home::testbd'); // Acepta tanto GET como POST
 /*
  * --------------------------------------------------------------------
  * Additional Routing
